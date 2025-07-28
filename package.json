@@ -1,10 +1,13 @@
 {
+  "homepage":"https://arsalan0786.github.io/Portfolio-V1/"
   "name": "webdev",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run dev",
+    "deploy":"gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
