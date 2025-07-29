@@ -7,6 +7,7 @@ import { Textarea } from './ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { useLanguage } from './LanguageContext';
 import { toast } from 'sonner';
+import { sendEmail } from '../services/emailService';
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -27,6 +28,7 @@ export function ContactSection() {
     e.preventDefault();
     setStatus('sending');
 
+    // Try server first
     try {
       const response = await fetch('http://localhost:5000/send-email', {
         method: 'POST',
@@ -39,14 +41,26 @@ export function ContactSection() {
         setStatus('success');
         toast.success('✅ Message sent successfully!');
         setFormData({ name: '', email: '', subject: '', message: '' });
+        return;
+      }
+    } catch (error) {
+      console.log('Server unavailable, trying EmailJS fallback...');
+    }
+
+    // Fallback to EmailJS
+    try {
+      const result = await sendEmail(formData);
+      if (result.success) {
+        setStatus('success');
+        toast.success('✅ Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         setStatus('error');
-        toast.error('❌ Failed to send message.');
-        console.error('Send failed:', result);
+        toast.error('❌ Failed to send message. Please try emailing directly.');
       }
     } catch (error) {
       setStatus('error');
-      toast.error('❌ An error occurred.');
+      toast.error('❌ Unable to send message. Please email directly at buildwitharsalan@gmail.com');
       console.error('Error:', error);
     }
   };

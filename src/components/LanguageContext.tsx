@@ -100,6 +100,9 @@ interface Translations {
   close: string;
   save: string;
   cancel: string;
+  sending: string;
+  successMessage: string;
+  errorMessage: string;
 }
 
 const translations: Record<Language, Translations> = {
@@ -201,6 +204,9 @@ const translations: Record<Language, Translations> = {
     close: 'Close',
     save: 'Save',
     cancel: 'Cancel',
+    sending: 'Sending...',
+    successMessage: 'Email sent successfully!',
+    errorMessage: 'Failed to send email.',
   },
   es: {
     // Navigation
@@ -300,6 +306,9 @@ const translations: Record<Language, Translations> = {
     close: 'Cerrar',
     save: 'Guardar',
     cancel: 'Cancelar',
+    sending: 'Enviando...',
+    successMessage: '¡Correo enviado con éxito!',
+    errorMessage: 'Error al enviar el correo.',
   },
 };
 

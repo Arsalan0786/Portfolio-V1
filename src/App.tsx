@@ -11,7 +11,8 @@ type Section = "home" | "about" | "contact";
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState<Section>("home");
-
+  
+  
   const renderSection = () => {
     switch (currentSection) {
       case "home":
