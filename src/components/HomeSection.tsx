@@ -12,13 +12,16 @@ export function HomeSection({ onSectionChange }: HomeSectionProps) {
   const { t } = useLanguage();
   const profileImage= 'profile.jpeg'
 
+
+
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <img
             src={profileImage}
-            alt="Shekh Arsalan Profile"
+            alt="Sheikh Arsalan Profile"
             className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-6 object-cover shadow-lg dark:shadow-2xl transition-shadow duration-300"
           />
         </div>
