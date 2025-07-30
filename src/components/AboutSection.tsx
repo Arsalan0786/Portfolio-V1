@@ -5,7 +5,7 @@ import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useLanguage } from './LanguageContext';
-import profileImage from '../assets/profile4.jpeg';
+import profileImage from '../assets/aboutpagepic.jpg';
 
 
 export function AboutSection() {
