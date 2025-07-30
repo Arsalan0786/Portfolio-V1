@@ -1,11 +1,10 @@
-import React from 'react';
 import { Code, Palette, Smartphone, Globe, Dumbbell, Users, Video, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useLanguage } from './LanguageContext';
-import profileImage from '../assets/aboutpagepic.jpg';
+
 
 
 export function AboutSection() {
@@ -110,8 +109,8 @@ export function AboutSection() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src={profileImage}
-                  alt="Shekh Arsalan"
+                  src='../assets/aboutpagespic.jpg'
+                  alt="Sheikh Arsalan"
                   className="rounded-2xl shadow-lg w-full max-w-md h-90 object-cover"
                 />
               </div>
