@@ -10,7 +10,7 @@ interface HomeSectionProps {
 
 export function HomeSection({ onSectionChange }: HomeSectionProps) {
   const { t } = useLanguage();
-  const profileImage= 'profile.jpeg'
+  const profileImage= '../assets/profile.jpeg';
 
 
 
