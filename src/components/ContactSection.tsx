@@ -69,7 +69,7 @@ export function ContactSection() {
     {
       icon: <Mail className="h-5 w-5 text-blue-600 dark:text-blue-400" />,
       label: 'Email',
-      value: 'buildwitharsalan@gmail.com',
+      value: 'buildwitharsalan@gmail.com 👈🏻',
       href: 'mailto:buildwitharsalan@gmail.com'
     },
     {
